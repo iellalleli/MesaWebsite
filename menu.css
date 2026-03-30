@@ -1,0 +1,313 @@
+/* Hero Section */
+.hero {
+    background-color: #f7f7f7;
+    background-image: url('assets/hero1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #FF8C42;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+    margin: 20px 0 0;
+}
+
+/* House Specialty */
+.specialty {
+    width: auto;
+    height: auto;
+    min-height: 650px;
+    background-image: url('assets/hero2.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 20px 0;
+}
+
+.specialty h2 {
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 5px;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    width: 350px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+  
+.card img {
+    width: 100%;
+    height: 200px;         
+    object-fit: cover;     
+    border-radius: 15px 15px 0 0;  
+    display: block;        
+    margin: 0;             
+    padding: 0;           
+}
+  
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    justify-content: space-between; 
+    padding: 30px;
+    font-family: "Nunito", sans-serif;
+    color: #212121; 
+    text-align: left;
+}
+  
+.card h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    min-height: 50px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #333;
+    flex-grow: 1; 
+    min-height: 60px; 
+}
+
+.card .price {
+    font-weight: bolder;
+    color: #FF8C42;
+    font-size: 1.3rem;
+    margin-top: auto; 
+}
+
+/* animation */
+.scroll-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-scale.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card:hover {
+    transform: scale(1.05) !important; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Courses */
+.main-courses {
+    width: auto;
+    height: auto;
+    background-image: url('assets/hero3.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 20px 0;
+}
+
+.main-courses h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 3rem;
+    margin: 20px 0 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.main-courses .card {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.main-courses .card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+    place-items: center; 
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.grid .card {
+    width: 325px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left; 
+    align-self: stretch; 
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .specialty h2, .main-courses h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 100px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .specialty {
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .card {
+        width: 300px;
+    }
+    
+    .grid .card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .navbar ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .specialty h2, .main-courses h2 {
+        font-size: 2rem;
+    }
+    
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid .card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        margin-top: 10px;
+    }
+    
+    .specialty h2, .main-courses h2 {
+        font-size: 1.8rem;
+    }
+    
+    .card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .card p {
+        font-size: 1rem;
+    }
+    
+    .card .price {
+        font-size: 1.1rem;
+    }
+    
+    .card-content {
+        padding: 20px;
+    }
+    
+    .navbar .logo {
+        font-size: 20px;
+    }
+    
+    .navbar ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .specialty h2, .main-courses h2 {
+        font-size: 1.5rem;
+    }
+    
+    .navbar ul {
+        gap: 10px;
+    }
+}

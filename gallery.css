@@ -1,0 +1,236 @@
+/* Hero Section */
+.hero {
+    background-color: #f7f7f7;
+    background-image: url('assets/hero1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #FF8C42;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+    margin: 20px 0 0;
+}
+
+/* Menu */
+.menu {
+    width: auto;
+    min-height: 300px;
+    background-image: url('assets/gallery1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 20px 5%;
+}
+
+/* Store Branches Section */
+.stores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5%;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+.stores h2 {
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Store Locations Section */
+.store-locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5%;
+    background-color: #fff;
+    margin-top: 0;
+}
+
+/* Cards Section */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    margin-top: -200px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px;
+    align-items: stretch; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    width: 280px;
+    max-width: 350px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0) !important;
+}
+
+.card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.card-content {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 15px;
+    font-family: "Nunito", sans-serif;
+    color: #212121;
+    text-align: left;
+}
+
+.card h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #333;
+    flex-grow: 1; 
+    min-height: 80px;
+    margin-top: 0;
+}
+
+.card .address {
+    font-weight: bolder;
+    color: #FF8C42;
+    font-size: 0.9rem;
+    display: block;
+    text-align: left;
+}
+
+/* End Section */
+.end {
+    width: auto;
+    min-height: 300px;
+    background-image: url('assets/gallery3.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 20px 5%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-top: -150px; 
+    }
+    .menu, .end {
+        background-size: cover; 
+        background-position: center; 
+        height: auto;
+        min-height: 200px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr; 
+        margin-top: -100px; 
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu, .end {
+        background-size: cover; 
+        background-position: center; 
+        height: auto;
+        min-height: 180px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem; 
+    }
+
+    .stores h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        margin-top: -50px; 
+    }
+
+    .menu, .end {
+        background-size: cover; 
+        background-position: center; 
+        height: auto;
+        min-height: 100px; 
+    }
+}
